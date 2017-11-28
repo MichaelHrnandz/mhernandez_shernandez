@@ -85,8 +85,8 @@ public class AboveAverageBot extends AdvancedRobot
             // finds target, resets count
             count = 0;
             // if target is too far away, turn and move torward it
-            if (e.getDistance() > 150) {
-                gunTurnAmt = normalRelativeAngle(e.getBearing() + (getHeading() - getRadarHeading()));
+            if (e.getDistance() > 250) {
+                gunTurnAmt = normalRelativeAngle(e.getBearing() - (getHeading() - getRadarHeading()));
 
                 setTurnGunRight(gunTurnAmt);
                 
@@ -97,7 +97,7 @@ public class AboveAverageBot extends AdvancedRobot
             }
 
             // sweet spot for target
-            gunTurnAmt = normalRelativeAngle(e.getBearing() + (getHeading() - getRadarHeading()));
+            gunTurnAmt = normalRelativeAngle(e.getBearing() - (getHeading() - getRadarHeading()));
             setTurnGunRight(gunTurnAmt);
             setFire(400 / e.getDistance());
 
@@ -135,7 +135,7 @@ public class AboveAverageBot extends AdvancedRobot
 	public void onHitRobot(HitRobotEvent e) {
             // set the target
             targetName = e.getName();
-            gunTurnAmt = normalRelativeAngle(e.getBearing() + (getHeading() - getRadarHeading()));
+            gunTurnAmt = normalRelativeAngle(e.getBearing() - (getHeading() - getRadarHeading()));
             setTurnGunRight(gunTurnAmt);
             setFire(3);
             setBack(50);

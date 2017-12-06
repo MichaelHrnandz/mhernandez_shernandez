@@ -1,6 +1,6 @@
 # CS 141 Robocode Report
 Team AboveAverageBot
-  by Michael Hernandez and Sebastian Hernandez
+  by Michael Hernandez and Sebastian Hernandez (seabass189)
 
 For our robot, we intially had wanted to create a robot would:
 
